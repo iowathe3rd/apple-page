@@ -1,5 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import React from "react";
+import Hero from "~/components/Hero";
+import Highlights from "~/components/Highlights";
+import NavBar from "~/components/NavBar";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,5 +12,11 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <React.Fragment></React.Fragment>;
+  return (
+    <main>
+      <NavBar />
+      <Hero />
+      <Highlights />
+    </main>
+  );
 }
